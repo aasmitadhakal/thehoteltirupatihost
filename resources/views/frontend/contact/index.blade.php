@@ -42,17 +42,12 @@
                 <a href="{{ url('/') }}">
                     Home
                 </a>
-
                 <i class="ri-arrow-right-line"></i>
-
                 <span>
                     Contact
                 </span>
-
             </div>
-
         </div>
-
     </div>
 
 </section>
