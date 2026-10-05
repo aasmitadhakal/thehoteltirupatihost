@@ -96,6 +96,36 @@ class FrontendController extends Controller
 
         return view('frontend.service.show', compact('servicesingle', 'services', 'service_page'));
     }
+    public function room()
+    {
+        $room_page = Page::where('status', 1)->where('slug', 'room')->first();
+        // $rooms = room::where('status', 1)->oldest("order")->get();
+
+        return view('frontend.room.index', compact('room_page'));
+    }
+    function roomsingle($slug)
+    {
+        $room_page = Page::where('status', 1)->where('slug', 'room')->first();
+        // $roomsingle = room::where('slug', $slug)->where('status', 1)->first();
+        // $rooms = room::where('status', 1)->oldest("order")->get();
+
+        return view('frontend.room.show', compact( 'room_page'));
+    }
+    public function menu()
+    {
+        $menu_page = Page::where('status', 1)->where('slug', 'menu')->first();
+        // $menus = menu::where('status', 1)->oldest("order")->get();
+
+        return view('frontend.menu.index', compact('menu_page'));
+    }
+    function menusingle($slug)
+    {
+        $menu_page = Page::where('status', 1)->where('slug', 'menu')->first();
+        // $menusingle = menu::where('slug', $slug)->where('status', 1)->first();
+        // $menus = menu::where('status', 1)->oldest("order")->get();
+
+        return view('frontend.menu.show', compact( 'menu_page'));
+    }
     public function event()
     {
         $event_page = Page::where('status', 1)->where('slug', 'event')->first();

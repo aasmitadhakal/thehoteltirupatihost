@@ -9,6 +9,8 @@ Route::name('frontend.')->group(
         Route::get('/about-us', [FrontendController::class, 'about'])->name('about');
         Route::get('/services', [FrontendController::class, 'service'])->name('service');
         Route::get('/services/{slug}', [FrontendController::class, 'servicesingle'])->name('servicesingle');
+        Route::get('/room', [FrontendController::class, 'room'])->name('room');
+        Route::get('/menu', [FrontendController::class, 'menu'])->name('menu');
         Route::get('/study-abroad', [FrontendController::class, 'abroadstudies'])->name('abroad');
         Route::get('/study-abroad/{slug}', [FrontendController::class, 'abroadstudiesingle'])->name('abroadsingle');
         Route::get('/test-preparation', [FrontendController::class, 'course'])->name('course');
